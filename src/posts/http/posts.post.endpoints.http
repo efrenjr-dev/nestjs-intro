@@ -1,0 +1,24 @@
+{{
+    exports.publishOn = new Date().toISOString()
+}}
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJlbWFpbCI6Im1hcmtAZG9lLmNvbSIsImlhdCI6MTczOTE3NjIyOCwiZXhwIjoxNzM5MTc5ODI4LCJhdWQiOiJsb2NhbGhvc3Q6MzAwMCIsImlzcyI6ImxvY2FsaG9zdDozMDAwIn0.THAzDJoxk5l_FyzmLh2ffAI5SbBvVR633t2rEkI8jPI
+
+{
+    "title":"What's new with NestJS",
+    "postType": "post",
+    "slug":"new-with-nestjs-17",
+    "status": "draft",
+    "content":"test content",
+    "schema": "{\r\n \"@context\": \"https:\/\/schema.org\",\r\n \"@type\": \"Person\"\r\n}",
+    "featuredImageUrl": "http://localhost.com/images/image1.jpg",
+    "publishOn": "{{publishOn}}",
+    // "tags":["nestjs","typescript"],
+    "metaOptions": {
+       "metaValue": "{\"sidebarEnabled\": true, \"footerActive\": true}"
+    },
+    "tags": [1,5]
+    
+}
